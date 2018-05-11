@@ -1,0 +1,18 @@
+create struct termios for terminal settings OK
+save terminal previous settings; OK
+create circular linked list for all inputs OK
+set all initial input info (selected, highlighted) OK
+setup terminal (tcsetattr) OK
+enter interactive mode OK
+display inputs in proper columns
+enter while loop for inputs
+	if space, highlight and select, if backspace or delete remove. If esc, ctrl c or crl z, exit program and restores.
+	if user presses enter, prints all the files separated by a space and exits
+move through the elements as in a circular list
+if user presses space, the argument is selected or unselected and displayed in reverse video text
+wherever the cursor is, text is underlined
+all the selected arguments are printed with a space between them
+program must react to resize. based on the size of the screen, the user must still be able to see all choices
+if user presses esc, exits cleanly and sends nothing to shell
+if user presses delete or backspace, removes item from list and redisplays. if list is empty, its like esc
+exit should return to
