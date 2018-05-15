@@ -6,7 +6,7 @@
 /*   By: adubugra <adubugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/10 12:39:32 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/10 20:12:45 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/14 17:57:02 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ t_elem			*handle_keys(t_elem *root, t_terminal *t)
 	{
 		if (!curr || !root)
 			return (0);
-		print_list(root, t);
+		print_list(root);
 		key = 0;
 		read(0, &key, 8);
 		clear_scrn(*t);

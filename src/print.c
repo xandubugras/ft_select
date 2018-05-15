@@ -6,7 +6,7 @@
 /*   By: adubugra <adubugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/10 19:26:56 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/10 20:11:10 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/14 17:57:17 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,14 +74,13 @@ static void	print_columns(t_elem *root, int size, int longest)
 	}
 }
 
-void		print_list(t_elem *root, t_terminal *t)
+void		print_list(t_elem *root)
 {
 	int		size;
 	int		longest;
 
 	if (!root)
 		return ;
-	set_terminal(t);
 	get_dims(root, &size, &longest);
 	print_columns(root, size, longest);
 }

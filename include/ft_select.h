@@ -6,7 +6,7 @@
 /*   By: adubugra <adubugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/08 12:02:28 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/10 20:25:34 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/14 17:56:18 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ typedef struct	s_stack
 
 struct termios	prev_term;
 struct termios	bg_term;
+t_elem			*root;
 
 void			init_signal_handlers(void);
 /*
@@ -76,7 +77,7 @@ void			retrieve_terminal(struct termios prev_term);
 */
 t_elem			*create_list(int argc, char **argv);
 
-void			print_list(t_elem *root, t_terminal *t);
+void			print_list(t_elem *root);
 
 void			print_selected(t_elem *root);
 
