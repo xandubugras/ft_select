@@ -6,7 +6,7 @@
 /*   By: adubugra <adubugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/10 19:26:56 by adubugra          #+#    #+#             */
-/*   Updated: 2018/05/14 17:57:17 by adubugra         ###   ########.fr       */
+/*   Updated: 2018/05/15 13:27:27 by adubugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ static void	print_columns(t_elem *root, int size, int longest)
 	int		tmp;
 	t_elem	*start;
 
+	tgetent(NULL, getenv("TERM"));
 	cols = 1 + size / tgetnum("li");
 	i = 0;
 	start = root;
